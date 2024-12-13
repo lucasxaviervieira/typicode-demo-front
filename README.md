@@ -1,50 +1,41 @@
-# React + TypeScript + Vite
+# Demonstration
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Projeto básico para utilização da [REST API](https://my-json-server.typicode.com/lucasxaviervieira/demo/) gerada pelo projeto [My Json Server](https://my-json-server.typicode.com/).
 
-Currently, two official plugins are available:
+(veja a demonstração: [typicode/demo »](https://github.com/typicode/demo))
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Instalação
 
-## Expanding the ESLint configuration
+Clone o projeto
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```bash
+  git clone https://github.com/lucasxaviervieira/typicode-demo-front
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Entre no diretório do projeto
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```bash
+  cd typicode-demo-front
 ```
+
+Instale as dependências
+
+```bash
+  npm install
+```
+
+Inicie o servidor
+
+```bash
+  npm run dev
+```
+
+## Tecnologias Usadas
+
+- [Vite](https://vite.dev/) Uma ferramenta de build que proporciona uma experiência de desenvolvimento mais rápida e simples para projectos web modernos.
+
+- [React](https://react.dev/) Uma biblioteca _JS_ para web.
+
+- [React Router](https://reactrouter.com/home) Uma biblioteca para gerenciamento de rotas para o React.
+
+- [Redux](https://redux.js.org/) Uma biblioteca _JS_ para gestão do estado global.
