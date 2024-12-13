@@ -14,31 +14,23 @@ const PostList: React.FC = () => {
     dispatch(fetchPosts());
   }, [dispatch]);
 
-  if (loading)
-    return (
-      <>
-        <p>Loading...</p>
-      </>
-    );
+  if (loading) return <p>Loading...</p>;
 
-  if (error)
-    return (
-      <>
-        <p>Error: {error}</p>
-      </>
-    );
+  if (error) return <p>Error: {error}</p>;
 
   return (
-    <div>
-      <h1>Posts</h1>
-      <ul>
-        {posts.map((post) => (
-          <li key={post.id}>
-            <Link to={`/posts/${post.id}`}>{post.title}</Link>
-          </li>
-        ))}
-      </ul>
-    </div>
+    <>
+      <div>
+        <h1>Posts</h1>
+        <ul>
+          {posts.map((post) => (
+            <li key={post.id}>
+              <Link to={`/posts/${post.id}`}>{post.title}</Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </>
   );
 };
 
